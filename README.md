@@ -1,0 +1,1 @@
+# Pasta-anual-fotolito
