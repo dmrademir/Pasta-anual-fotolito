@@ -57,7 +57,7 @@ folders = ("01 - JANEIRO", "02 - FEVEREIRO", "03 - MARÇO",
            "07 - JULHO", "08 - AGOSTO", "09 - SETEMBRO",
            "10 - OUTUBRO", "11 - NOVEMBRO", "12 - DEZEMBRO")
 year = int(input("Informe o ANO:  "))
-os_path = 'F:/ARTE/ADEMIR/LAYOUTS DO DIA'  # Local onde a pasta do "ano" será criada
+os_path = '/home/ademir'  # Local onde a pasta do "ano" será criada
 path = f'{os_path}/!{year}/'
 weeks = list()
 
