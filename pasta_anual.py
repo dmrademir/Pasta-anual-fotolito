@@ -13,8 +13,8 @@ def CreateWidget():
     root_sourceYear = Entry(root, width=50, textvariable=AnodaPasta)
     root_sourceYear.grid(row=0, column=2, padx=5, pady=5, columnspan=2)
 
-    Label_Destination = Label(root, text='LOCAL DA PASTA:')
-    Label_Destination.grid(row=1, column=0, padx=5, pady=5)
+    label_Destination = Label(root, text='LOCAL DA PASTA:')
+    label_Destination.grid(row=1, column=0, padx=5, pady=5)
     root_Destination = Entry(root, width=50, textvariable=LocaldaPasta)
     root_Destination.grid(row=1, column=2, padx=5, pady=5, columnspan=2)
     button_browse = Button(root, text='Localizar', width=15)
