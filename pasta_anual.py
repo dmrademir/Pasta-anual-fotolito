@@ -1,7 +1,39 @@
 import calendar
 import os
+import shutil
+import tkinter as tk
+from tkinter import *
+from tkinter import messagebox, filedialog
 
 
+# Funções para criação da Interface
+def CreateWidget():
+    labelyear = Label(root, text='ANO DA PASTA:')
+    labelyear.grid(row=0, column=0, padx=3, pady=3)
+    root_sourceYear = Entry(root, width=50, textvariable=AnodaPasta)
+    root_sourceYear.grid(row=0, column=2, padx=5, pady=5, columnspan=2)
+
+    Label_Destination = Label(root, text='LOCAL DA PASTA:')
+    Label_Destination.grid(row=1, column=0, padx=5, pady=5)
+    root_Destination = Entry(root, width=50, textvariable=LocaldaPasta)
+    root_Destination.grid(row=1, column=2, padx=5, pady=5, columnspan=2)
+    button_browse = Button(root, text='Localizar', width=15)
+    button_browse.grid(row=1, column=4, padx=3, pady=3, columnspan=2)
+
+
+root = tk.Tk()
+
+root.title('Pasta Anual')
+root.geometry('720x100')
+LocaldaPasta = StringVar()  # Local onde a Pasta Anual será criada
+AnodaPasta = StringVar()  # Nome da Pasta Anual. O ano a ser criado
+
+CreateWidget()
+
+root.mainloop()
+
+
+# Funções para criação das Pastas
 def create_year_folder():
     directory = [year]
     for i in directory:
@@ -52,6 +84,9 @@ def create_days():
         index += 1
 
 
+# Interface
+
+# Program
 folders = ("01 - JANEIRO", "02 - FEVEREIRO", "03 - MARÇO",
            "04 - ABRIL", "05 - MAIO", "06 - JUNHO",
            "07 - JULHO", "08 - AGOSTO", "09 - SETEMBRO",
